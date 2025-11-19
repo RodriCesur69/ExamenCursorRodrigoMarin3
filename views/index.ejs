@@ -1,11 +1,78 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido - RodriApp</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>RodriApp</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contenedor-hero">
+            <div class="columna-izquierda">
+                <h2>¡Bienvenido!</h2>
+                <p>Descubre todas las funcionalidades que tenemos preparadas para ti. Únete a nuestra comunidad y empieza a disfrutar de una experiencia única.</p>
+                <p>Accede a tu cuenta o regístrate en segundos para comenzar tu aventura con nosotros.</p>
+            </div>
+
+            <div class="columna-derecha">
+                
+                <div id="zona-login" class="zona-interactiva">
+                    <button id="btn-login-mostrar" class="boton-opcion">
+                        Ya estoy registrado
+                    </button>
+                    
+                    <div id="panel-login" class="formulario-contenedor oculto">
+                        <h3>Ya estoy registrado</h3>
+                        <form action="/login" method="POST">
+                            <input type="email" placeholder="Correo electrónico" required>
+                            <input type="password" placeholder="Contraseña" required>
+                            <div class="grupo-botones">
+                                <button type="submit" class="btn-enviar">Enviar</button>
+                                <button type="button" class="btn-cancelar accion-cancelar">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="zona-registro" class="zona-interactiva">
+                    <button id="btn-registro-mostrar" class="boton-opcion">
+                        No estoy registrado aún
+                    </button>
+                    
+                    <div id="panel-registro" class="formulario-contenedor oculto">
+                        <h3>No estoy registrado aún</h3>
+                        <form action="/registro" method="POST">
+                            <input type="email" placeholder="Correo electrónico" required>
+                            <div class="grupo-botones">
+                                <button type="submit" class="btn-enviar">Enviar</button>
+                                <button type="button" class="btn-cancelar accion-cancelar">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>By Rodrigo Marín Jaime, 2025</p>
+    </footer>
+
+    <script src="/javascripts/app.js"></script>
+</body>
 </html>
